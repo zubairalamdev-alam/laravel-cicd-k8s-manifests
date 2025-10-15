@@ -2,16 +2,18 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: laravel-ingress
-  namespace: laravel
+  namespace: laravel-app
+  annotations:
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: laravel.local
+    - host: laravel.local   # change to your domain
       http:
         paths:
           - path: /
             pathType: Prefix
             backend:
               service:
-                name: laravel-svc
+                name: laravel-service
                 port:
                   number: 80
