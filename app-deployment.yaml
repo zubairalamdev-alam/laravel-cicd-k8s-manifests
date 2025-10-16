@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: laravel-app
-          image: zubairalamdev/laravel-app:build-25
+          image: zubairalamdev/laravel-app:build-26
           ports:
             - containerPort: 9000
           envFrom:
