@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: laravel-app
-          image: zubairalamdev/laravel-app:latest   # <-- Jenkins updates this line
+          image: zubairalamdev/laravel-app:build-25
           ports:
             - containerPort: 9000
           envFrom:
